@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+void search_element (int marks[], int size, int search_num);
+
+int main() 
+{
+    const int size = 5;
+    int marks[size] = { 5,12,8,20,3};
+    int search_num;
+
+    cout << "ENTER NUMBER : ";
+    cin >> search_num;
+
+    search_element(marks, size, search_num);
+
+    return 0;
+}
+void search_element(int marks[], int size, int search_num)
+{
+    {
+        bool found = false;
+        for (int index = 0; index < size; index++)
+        {
+            if (marks[index] == search_num)
+            {
+                found = true;
+                break;
+            }
+        }
+        if (found)
+            cout << "found" << endl;
+        else
+            cout << "not found" << endl;
+    }
+}
