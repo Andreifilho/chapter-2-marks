@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+void print_array(int marks[], int size);
+
+int main() 
+{
+    const int size = 5;
+    int marks[size] = { 5,12,8,20,3};
+    print_array(marks, size);
+
+    return 0;
+}
+void print_array(int marks[], int size)
+{
+    for (int index = 0; index < size; index++)
+    {
+        if (marks[index] < 10)
+        {
+            marks[index] = 10;
+        }
+
+        {
+            cout << marks[index] << " ";
+        }
+    } 
+}
