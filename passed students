@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+void show_results(int scores[], int count);
+
+int main() 
+{
+    int total_entries = 5;
+    int marks_list[total_entries] = {35, 78, 40, 22, 90};
+
+    show_results(marks_list, total_entries);
+
+    return 0;
+}
+
+void show_results(int scores[], int count) 
+{
+    int passed_qty = 0;
+
+    for (int i = 0; i < count; i++) 
+    {
+        if (scores[i] >= 40) 
+        {
+            passed_qty++;
+        }
+    }
+
+    cout << "Passed students: " << passed_qty << endl;
+}
