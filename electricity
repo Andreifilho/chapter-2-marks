@@ -1,0 +1,29 @@
+int find_max_consumption(int power_data[], int total_days)
+{
+    int max_recorded = power_data[0];
+
+    for (int i = 1; i < total_days; i++)
+    {
+        if (power_data[i] > max_recorded)
+        {
+            max_recorded = power_data[i];
+        }
+    }
+
+    return max_recorded;
+}
+
+int calculate_peak_days(int power_data[], int total_days)
+{
+    int peak_day_counter = 0;
+
+    for (int i = 0; i < total_days; i++)
+    {
+        if (power_data[i] > 10)
+        {
+            peak_day_counter++;
+        }
+    }
+
+    return peak_day_counter;
+}
