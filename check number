@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+void locate_value(int data_set[], int capacity, int target);
+
+int main() 
+{
+    int array_limit = 5;
+    int values[array_limit] = {4, 7, 9, 12, 15};
+
+    int input_val;
+
+    cout << "Enter the number : ";
+    cin >> input_val;
+
+    locate_value(values, array_limit, input_val);
+
+    return 0;
+}
+
+void locate_value(int data_set[], int capacity, int target) 
+{
+    bool is_present = false;
+
+    for (int j = 0; j < capacity; j++) 
+    {
+        if (data_set[j] == target) 
+        {
+            is_present = true;
+            break;
+        }
+    }
+
+    if (is_present) 
+    {
+        cout << "Found" << endl;
+    } 
+    else 
+    {
+        cout << "Not Found" << endl;
+    }
+}
